@@ -1,101 +1,100 @@
 # Capos
 
-Ejercicio para el aprenizaje de colecciones
-
-La parte 1 incluye todo lo referido a referencias y tipos de colecciones
-La parte 2 trabaja sobre el envío de mensajes polimórficos a los elementos (bloques)
+Este ejercicio está diseñado para aprender sobre colecciones. La parte 1 incluye todo lo referido a referencias y tipos de colecciones, y la parte 2 trabaja sobre el envío de mensajes polimórficos a los elementos (mediante el uso de bloques)
 
 ## Parte 1 (referencias)
 
-
 ### 1.1 Rolando
 
-Se trata de un juego en el cual nuestro personaje, Rolando, va recolectando distintos artefactos por el mundo.
-Para la primera versión, existen 4 artefactos:
+Se trata de un juego en el cual nuestro personaje, Rolando, va recolectando distintos artefactos por el mundo virtual. Para la primera versión, existen 4 artefactos:
 
 - Espada del destino
 - Libro de hechizos 
 - Collar divino
 - Armadura de acero valyrio
 
-Al principio Rolando solo puede llevar hasta 2 artefactos a la vez, 
-pero se espera que a medida que se desarrolla el juego pueda incrementar 
-su capacidad.
+Al principio Rolando solo puede recolectar hasta 2 artefactos a la vez, pero se espera que a medida que se desarrolle el juego pueda incrementar su capacidad.
 
-Cada vez que rolando se encuentra con un artefacto, y tiene capacidad para llevarlo, lo levanta. 
+Cada vez que Rolando se encuentra con un artefacto, lo levanta sólo si tiene capacidad para llevarlo. 
 
 #### Requerimientos
+
+Diseñar los objetos con un comportamiento que permita representar:
+
 - Que rolando encuentre un artefacto
 - Configurar el tamaño de la mochila de rolando
 - Saber los artefactos que Rolando lleva consigo
 
 #### Ejemplo:
 
- 1. rolando encuentra la espada del destino (la agarra)
- 2. rolando encuentra el libro de hechizos (la agarra)
- 3. rolando encuentra el collar divino (no lo agarra, ya que tiene la espada y el libro encima y su capacidad es de 2)
+ 1. Rolando encuentra la espada del destino (la recolecta)
+ 2. Rolando encuentra el libro de hechizos (la recolecta)
+ 3. Rolando encuentra el collar divino (no lo recolecta, ya que tiene la espada y el libro encima y su capacidad es de 2)
 
-En este momento los artefactos que tiene rolando son la espada del destino y el libro de hechizos
+En este momento los artefactos que tiene Rolando son la espada del destino y el libro de hechizos
    
 
 ### 1.2 Castillo de piedra
 
-El castillo de piedra es donde Rolando vive. Es tan grande que allí no hay límite 
-para almacenar artefactos.
-Cuando rolando llega al castillo de piedra guarda en él todos los artefactos que lleva encima 
-liberando espacio para poder levantar nuevos. 
+El castillo de piedra es donde Rolando vive. Es tan grande que allí no hay límite para almacenar artefactos. Cuando Rolando llega al castillo de piedra, guarda en él todos los artefactos que lleva consigo, liberando espacio para poder recolectar nuevos. 
 
 #### Requerimientos
-- hacer que rolando llegue a su hogar (el castillo)
-- saber los artefactos que hay en el castillo
+
+Incorporar a los objetos el comportamiento que permita:
+
+- Hacer que rolando llegue a su hogar (el castillo)
+- Saber qué artefactos hay en el castillo
 
 #### Ejemplo:
- 1. rolando encuentra la espada del destino (la agarra)
- 2. rolando encuentra el libro de hechizos (la agarra)
- 3. rolando llega al castillo de piedra (deja en el castillo la espada y el libro de hechizos)
- 4. rolando encuentra el collar divino (ahora si lo puede agarrar, ya que liberó espacio)
- 3. rolando llega al castillo de piedra de nuevo(deja el collar, con lo cual ahora el castillo tiene el collar, la espada y el libro)
+ 1. Rolando encuentra la espada del destino (la recolecta)
+ 2. Rolando encuentra el libro de hechizos (la recolecta)
+ 3. Rolando llega al castillo de piedra (deja en el castillo la espada y el libro de hechizos)
+ 4. Rolando encuentra el collar divino (ahora si lo puede recolectar, ya que liberó espacio)
+ 3. Rolando llega al castillo de piedra nuevamente (deja el collar, con lo cual ahora el castillo tiene el collar, la espada y el libro)
  
 
-### 1.3 Saber los artefactos de Rolando
- Hay dos preguntas interesantes que debe poder contestar Rolando, por un lado cuales son los artefactos que tiene encima 
- (ya resuelto en el punto inicial), pero también debe saber cuales son todos los artefactos que él posee 
- sin importar si lo tiene encima o en su castillo.
+### 1.3 Saber qué artefactos tiene Rolando
+
+Hay dos preguntas interesantes que debe poder contestar Rolando, por un lado cuáles son los artefactos que tiene consigo (ya resuelto en el punto inicial), pero también debe saber cuáles son todos los artefactos que él posee (sus posesiones) sin importar si los tiene consigo o en su castillo.
  
- También se quiere preguntar si posee un artefacto en especial.
+También se quiere preguntar si posee un artefacto en particular.
 
 #### Requerimientos
-- saber las posesiones de rolando
-- saber si un rolando posee un artefacto en especial
+
+Incorporar a los objetos el comportamiento que permita:
+
+- Saber las posesiones de Rolando
+- Saber si Rolando posee un artefacto en particular
 
 #### Ejemplo: 
-	Si el castillo tiene el collar, la espada. Rolando tiene la armadura. 
-	Entonces rolando posee el collar, la espada y la armadura.
-	El libro no lo posee.
+
+Suponiendo que en el castillo están el collar y la espada, y que Rolando tiene la armadura. Entonces las posesiones de Rolando son 3: el collar, la espada y la armadura. El libro no está entre sus posesiones.
  
 ### 1.4 Saber la historia de los encuentros con los artefactos.
  
- Se desea saber el orden en que rolando fue encontrándose los artefactos, 
- independientemente de si los agarró o no.
+ Se desea saber el orden en que Rolando fue encontrando los artefactos, independientemente de si los recolectó o no.
 
 ### Requerimiento
+
+Incorporar a los objetos el comportamiento que permita:
 - Saber la historia de los encuentros
  
 #### Ejemplo:
  
- 1. rolando encuentra la espada del destino (la agarra)
- 2. rolando encuentra el libro de hechizos (la agarra)
- 3. rolando encuentra el collar divino (no lo agarra, ya que tiene la espada y el libro encima y su capacidad es de 2)
- 4. rolando llega al castillo de piedra (deja en el castillo la espada y el libro de hechizos)
- 5. rolando encuentra la armadura de acero valyrio (la agarra)
- 6. rolando encuentra el collar divino (ahora si lo puede agarrar, ya que liberó espacio)
+ 1. Rolando encuentra la espada del destino (la recolecta)
+ 2. Rolando encuentra el libro de hechizos (la recolecta)
+ 3. Rolando encuentra el collar divino (no lo recolecta, ya que tiene la espada y el libro encima y su capacidad es de 2)
+ 4. Rolando llega al castillo de piedra (deja en el castillo la espada y el libro de hechizos)
+ 5. Rolando encuentra la armadura de acero valyrio (la recolecta)
+ 6. Rolando encuentra el collar divino (ahora si lo puede recolectar, ya que liberó espacio)
  
 Si consultamos la historia de encuentro con los artefactos debería ser:
+
  1. espada del destino 
  2. libro de hechizos
  3. collar divino
  4. armadura de acero valyrio
- 5. collar divino (de nuevo!)
+ 5. collar divino (¡nuevamente!)
  
 ## Parte 2 (mensajes con bloques) 
 
