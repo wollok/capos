@@ -53,7 +53,7 @@ Incorporar a los objetos el comportamiento que permita:
 
 ### 1.3 Saber qué artefactos tiene Rolando
 
-Hay dos preguntas interesantes que debe poder contestar Rolando, por un lado cuáles son los artefactos que tiene consigo (ya resuelto en el punto inicial), pero también debe saber cuáles son todos los artefactos que él posee (sus posesiones) sin importar si los tiene consigo o en su castillo.
+Hay dos preguntas interesantes que debe poder contestar Rolando, por un lado cuáles son los artefactos que tiene en la mochila (ya resuelto en el punto inicial), pero también debe saber cuáles son todos los artefactos que él posee (sus posesiones) sin importar si los tiene en la mochila o en su castillo.
  
 También se quiere preguntar si posee un artefacto en particular.
 
@@ -94,18 +94,6 @@ Si consultamos la historia de encuentro con los artefactos debería ser:
  5. collar divino (¡nuevamente!)
 
 
-### 1.5 Reflexionar sobre los conceptos
-
-* Elegir un polimorfismo e indicar: 
-
-   - ¿Qué nombre le pondrías al tipo de los objetos polimórficos?
-   - ¿Qué mensajes componen ese tipo?
-   - ¿Quiénes usan los mensajes polimórficos?
-   
-* Respecto de las colecciones definidas:
-
-    - ¿Qué **tipo** de elementos contienen?
-    - ¿Qué mensaje polimórfico (perteneciente al tipo mencionado) utilizaste desde la API de colecciones de wollok?
 
  
 ## Parte 2 (mensajes con bloques) 
@@ -212,3 +200,16 @@ Un artefacto fatal es aquel que le da a Rolando un poder de pelea superior al po
 
 Si Rolando tiene de base 15, la espada, la armadura y el collar, entonces cuenta con un artefacto fatal, que es la espada, para derrotar a Astra. Sin embargo, no cuenta con ningún artefacto fatal para derrotar a Caterina.
 
+
+### 2.6 Reflexionar sobre los conceptos
+
+* Elegir un polimorfismo e indicar: 
+
+   - ¿Qué nombre le pondrías al tipo de los objetos polimórficos?
+   - ¿Qué mensajes componen ese tipo?
+   - ¿Quiénes usan los mensajes polimórficos?
+   
+* Respecto de las colecciones definidas:
+
+    - ¿Qué **tipo** de elementos contienen?
+    - ¿Qué mensaje polimórfico (perteneciente al tipo mencionado) utilizaste dentro de un bloque?
