@@ -130,11 +130,11 @@ El poder de pelea de Rolando es el resultado de sumar su poder base (que inicial
 
 ### 2.2 Libro de hechizos
 
-El libro de hechizos contiene varios hechizos, pero solo se pueden usar de uno a la vez. Los hechizos están ordenados y se utilizan en ese orden. Luego de utilizar  un hechizo éste se descarta. Existen estos 3 hechizos (pero podría haber más):
+El libro de hechizos contiene varios hechizos, pero solo se pueden usar uno a la vez. Los hechizos están ordenados y se utilizan en ese orden. Luego de utilizar  un hechizo, éste se descarta. Existen estos 3 hechizos (pero podría haber más):
 
 - Bendición: aporta 4 unidades de poder de pelea
-- Invisibilidad: aporta la misma cantidad de poder de pelea base que el personaje
-- Invocación: Aporta el valor del artefacto más poderoso para el héroe que posee en su morada (y el artefacto del castillo no sufre ningún efecto por la batalla)
+- Invisibilidad: el poder que aporta es el poder de pelea **base** del personaje
+- Invocación: aporta el valor del artefacto más poderoso para el héroe que posee en su morada (y el artefacto del castillo no sufre ningún efecto por la batalla)
 
 Si el libro de hechizos no tiene ningún hechizo, entonces su aporte es nulo.
 
