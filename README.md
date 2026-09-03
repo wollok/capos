@@ -1,37 +1,35 @@
-# Capos
+# Erethia
 
 Este ejercicio está diseñado para aprender sobre colecciones. La parte 1 incluye todo lo referido a referencias y tipos de colecciones, y la parte 2 trabaja sobre el envío de mensajes polimórficos a los elementos (mediante el uso de bloques)
+
 
 ## Parte 1 (referencias)
 
 ### 1.1 Rolando
 
-Se trata de un juego en el cual nuestro personaje, Rolando, va recolectando distintos artefactos por el mundo virtual. Para la primera versión, existen 4 artefactos:
+En la tierra de Erethia vive Rolando, quien va recolectando distintos artefactos mágicos. Para esta primera versión, existen 4 artefactos:
 
-- Espada del destino
-- Libro de hechizos 
-- Collar divino
-- Armadura de acero valyrio
+- Una espada del destino
+- Un libro de hechizos 
+- Un collar divino
+- Una armadura de acero valyrio
 
-Al principio Rolando solo puede recolectar hasta 2 artefactos a la vez, pero se espera que a medida que se desarrolle el juego pueda incrementar su capacidad.
-
-Cada vez que Rolando se encuentra con un artefacto, lo levanta sólo si tiene capacidad para llevarlo. 
+En su mochila, Rolando puede llevar hasta 2 artefactos a la vez, pero se espera que a medida que se desarrolle el juego pueda incrementar esa capacidad. Entonces, cada vez que Rolando se encuentra con un artefacto, analiza si tiene capacidad para llevarlo, y en caso de que sea posible, lo recolecta. 
 
 #### Requerimientos
 
 Diseñar los objetos con un comportamiento que permita representar:
 
-- Que rolando encuentre un artefacto
-- Configurar el tamaño de la mochila de rolando
-- Saber los artefactos que Rolando lleva consigo
+- Que Rolando encuentre un artefacto
+- Configurar el tamaño de la mochila de Rolando
+- Conocer los artefactos que Rolando lleva en su mochila
 
 #### Ejemplo:
 
- 1. Rolando encuentra la espada del destino (la recolecta)
- 2. Rolando encuentra el libro de hechizos (la recolecta)
- 3. Rolando encuentra el collar divino (no lo recolecta, ya que tiene la espada y el libro encima y su capacidad es de 2)
-
-En este momento los artefactos que tiene Rolando son la espada del destino y el libro de hechizos
+ 1. Rolando tiene la mochila vacía y encuentra la espada del destino (la recolecta)
+ 2. Rolando encuentra el libro de hechizos (la recolecta) 
+ 3. Rolando encuentra el collar divino pero no lo recolecta, ya que tiene la espada y el libro encima y la capacidad de su mochila es de 2. 
+ 4. Si se consultan los artefactos que tiene Rolando se obtienen la espada del destino y el libro de hechizos.
    
 
 ### 1.2 Castillo de piedra
@@ -76,8 +74,7 @@ Suponiendo que en el castillo están el collar y la espada, y que Rolando tiene 
 
 ### Requerimiento
 
-Incorporar a los objetos el comportamiento que permita:
-- Saber la historia de los encuentros
+Incorporar a los objetos el comportamiento que permita saber la historia de los encuentros.
  
 #### Ejemplo:
  
@@ -95,12 +92,29 @@ Si consultamos la historia de encuentro con los artefactos debería ser:
  3. collar divino
  4. armadura de acero valyrio
  5. collar divino (¡nuevamente!)
+
+
+### 1.5 Reflexionar sobre los conceptos
+
+* Elegir un polimorfismo e indicar: 
+
+   - ¿Qué nombre le pondrías al tipo de los objetos polimórficos?
+   - ¿Qué mensajes componen ese tipo?
+   - ¿Quiénes usan los mensajes polimórficos?
+   
+* Respecto de las colecciones definidas:
+
+    - ¿Qué **tipo** de elementos contienen?
+    - ¿Qué mensaje polimórfico (perteneciente al tipo mencionado) utilizaste desde la API de colecciones de wollok?
+
  
 ## Parte 2 (mensajes con bloques) 
 
 ### 2.1 Comportamiento de los artefactos
 
-Los artefactos son elementos que aportan al personaje cierto poder que puede usar en una batalla. Pero cuidado que cada vez que se combate en una batalla se sufren efectos. El poder de pelea de Rolando, dependerá de un valor base (inicialmente configurable) y de sus artefactos. **Tener en cuenta** al momento de programar los artefactos que éstos podrían ser usados por otros personajes que aún se han introducido.
+Los artefactos son elementos que aportan al personaje cierto poder que puede usar en una batalla. Pero cuidado que cada vez que se combate en una batalla se sufren efectos. El poder de pelea de Rolando, dependerá de un valor base (inicialmente configurable) y de sus artefactos. **Tener en cuenta** al momento de programar los artefactos que éstos podrían ser usados por otros personajes que aún se han introducpresentado.
+
+Poder de pelea de cada artefacto
   
 - Espada del destino: La primera vez que se utiliza aporta la misma cantidad que el poder base del personaje, luego sólo el 50%. 
 - Collar divino: aporta 3 puntos, pero si el personaje tiene un poder base mayor a 6, le suma también un punto por cada batalla en la que se haya usado el collar.
@@ -108,13 +122,18 @@ Los artefactos son elementos que aportan al personaje cierto poder que puede usa
 
 _Nota_ La regla del libro de hechizos se define más adelante.
 
-El poder de pelea de Rolando es el resultado de sumar su poder base (que inicialmente es 5) a la sumatoria de los poderes de pelea que le aportan los artefactos que tiene consigo. Cuando ocurre una batalla, se utilizan todos los artefactos que rolando lleva consigo, y además se incrementa en 1 el número base del poder de pelea de rolando. 
+El poder de pelea de Rolando es el resultado de sumar su poder base (que inicialmente es 5) a la sumatoria de los poderes de pelea que le aportan los artefactos que tiene en su mochila. Cuando ocurre una batalla, se utilizan todos los artefactos que rolando lleva consigo, y además se incrementa en 1 el número base del poder de pelea de rolando. 
 
 #### Requerimientos
 
 - Configurar el poder base de Rolando
 - Conocer el poder de pelea de Rolando
-- Hacer que Rolando luche una batalla
+- Hacer que Rolando luche una batalla   
+
+#### Ejemplo de poder de pelea: 
+
+- Si Rolando tiene 5 de base y capacidad de 3 artefactos. Entre sus artefactos se encuentran la *espada* (aporta 5), la *armadura* (aporta 6) y el *collar* (aporta 3). Entonces el poder de pelea de Rolando es 5 + 5 + 6 + 3 = 19
+
  
 #### Ejemplo de batalla: 
 
@@ -122,15 +141,11 @@ El poder de pelea de Rolando es el resultado de sumar su poder base (que inicial
 - Luego de la primer batalla Rolando tiene 6 de base, la espada (aporta 6/2 = 3), la armadura (aporta 6) y el collar (aporta 3)  
 - Luego de la segunda batalla Rolando tiene 7 de base, la espada (aporta 7/2 = 3.5), la armadura 6 y el collar (3+2=5)
 - Luego de la tercera batalla Rolando tiene 8 de base, la espada (aporta 8/2=4), la armadura 6 y el collar (3+3=6)
-   
-#### Ejemplo de poder de pelea: 
-
-- Si Rolando tiene 5 de base y capacidad de 3 artefactos. Entre sus artefactos se encuentran la *espada* (aporta 5), la *armadura* (aporta 6) y el *collar* (aporta 3). Entonces el poder de pelea de Rolando es 5 + 5 + 6 + 3 = 19
 
 
 ### 2.2 Libro de hechizos
 
-El libro de hechizos contiene varios hechizos, pero solo se pueden usar uno a la vez. Los hechizos están ordenados y se utilizan en ese orden. Luego de utilizar  un hechizo, éste se descarta. Existen estos 3 hechizos (pero podría haber más):
+El libro de hechizos contiene varios hechizos, que se utilizan en un determinado orden y de a uno a la vez. Luego de utilizar un hechizo, éste se descarta. Existen estos 3 hechizos (pero podría haber más):
 
 - Bendición: aporta 4 unidades de poder de pelea
 - Invisibilidad: el poder que aporta es el poder de pelea **base** del personaje
@@ -140,7 +155,7 @@ Si el libro de hechizos no tiene ningún hechizo, entonces su aporte es nulo.
 
 #### Requerimiento
 
-- Programar el libro de hechizo para que sea polimórfico con el resto de los artefactos
+Programar el libro de hechizo para que sea polimórfico con el resto de los artefactos
 
 #### Ejemplo
 
@@ -164,8 +179,8 @@ En la tierra de Erethia existen 3 poderosos enemigos y de cada uno interesa sabe
 Los enemigos en Erethia que Rolando puede vencer son aquellos que tienen un poder de batalla menor al suyo. A su vez, las moradas que Rolando podría conquistar son las moradas de los enemigos a los cuales puede vencer.
 
 #### Requerimientos
-- Saber cuales son los enemigos que Rolando puede vencer
-- Conocer las moradas conquistables por Rolando
+- Saber cuales son los enemigos que Rolando **puede vencer**
+- Conocer las moradas **conquistables** por Rolando
 
 #### Ejemplo
  
@@ -178,21 +193,22 @@ Se considera que Rolando es poderoso en la tierra de Erethia si está en condici
 
 #### Requerimiento
 
-- Poder determinar si Rolando es poderoso
+Poder determinar si Rolando es poderoso
 
 #### Ejemplo
 
-En el caso anterior no es poderoso. Pero si se establece en 10 el poder base de Rolando, entonces sí lo es.
+En el caso de ejemplo anterio Rolando no es poderoso, pero si su poder de base se establece en 10, entonces sí lo es.
 
 ### 2.5 Artefacto fatal
 
-Un artefacto fatal es aquel que le da a Rolando un poder de pelea superior al poder de batalla de su enemigo. Es decir, un artefacto no es fatal por sí solo si no se calcula para un enemigo en particular.
+Un artefacto fatal es aquel que le da a Rolando un poder de pelea superior al poder de batalla de su enemigo. Es decir, un artefacto no es fatal por sí solo, sino que se calcula para un enemigo en particular.
 
 #### Requerimiento
 
-- Requerimiento: Saber si Rolando posee consigo un artefacto fatal para enfrentar un enemigo
-- Obtener de entre los artefactos que lleva consigo rolando, un artefacto fatal para enfrentar a un enemigo
+- Saber si Rolando posee consigo un artefacto fatal para derrotar un enemigo
+- Obtener de entre los artefactos que lleva consigo rolando, un artefacto fatal para derrotar a un enemigo
 
 #### Ejemplo
 
-Si Rolando tiene de base 15, la espada, la armadura y el collar, entonces cuenta con un artefacto fatal, que es la espada, para enfrentar a Astra. Sin embargo, no cuenta con ningún artefacto fatal para enfrentar a Caterina.
+Si Rolando tiene de base 15, la espada, la armadura y el collar, entonces cuenta con un artefacto fatal, que es la espada, para derrotar a Astra. Sin embargo, no cuenta con ningún artefacto fatal para derrotar a Caterina.
+
