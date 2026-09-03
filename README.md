@@ -24,6 +24,8 @@ Diseñar los objetos con un comportamiento que permita representar:
 - Configurar el tamaño de la mochila de Rolando
 - Conocer los artefactos que Rolando lleva en su mochila
 
+Desarrollar **tests** siguiendo el ejemplo.
+
 #### Ejemplo:
 
  1. Rolando tiene la mochila vacía y encuentra la espada del destino (la recolecta)
@@ -42,6 +44,9 @@ Incorporar a los objetos el comportamiento que permita:
 
 - Hacer que rolando llegue a su hogar (el castillo)
 - Saber qué artefactos hay en el castillo
+
+
+Desarrollar **tests** siguiendo el ejemplo.
 
 #### Ejemplo:
  1. Rolando encuentra la espada del destino (la recolecta)
@@ -64,6 +69,9 @@ Incorporar a los objetos el comportamiento que permita:
 - Saber las posesiones de Rolando
 - Saber si Rolando posee un artefacto en particular
 
+
+Desarrollar **tests** siguiendo el ejemplo.
+
 #### Ejemplo: 
 
 Suponiendo que en el castillo están el collar y la espada, y que Rolando tiene la armadura. Entonces las posesiones de Rolando son 3: el collar, la espada y la armadura. El libro no está entre sus posesiones.
@@ -74,7 +82,8 @@ Suponiendo que en el castillo están el collar y la espada, y que Rolando tiene 
 
 ### Requerimiento
 
-Incorporar a los objetos el comportamiento que permita saber la historia de los encuentros.
+1. Incorporar a los objetos el comportamiento que permita saber la historia de los encuentros.
+2. Desarrollar **tests** siguiendo el ejemplo.
  
 #### Ejemplo:
  
@@ -92,8 +101,6 @@ Si consultamos la historia de encuentro con los artefactos debería ser:
  3. collar divino
  4. armadura de acero valyrio
  5. collar divino (¡nuevamente!)
-
-
 
  
 ## Parte 2 (mensajes con bloques) 
@@ -117,6 +124,7 @@ El poder de pelea de Rolando es el resultado de sumar su poder base (que inicial
 - Configurar el poder base de Rolando
 - Conocer el poder de pelea de Rolando
 - Hacer que Rolando luche una batalla   
+- Desarrollar **tests** siguiendo el ejemplo.
 
 #### Ejemplo de poder de pelea: 
 
@@ -143,7 +151,8 @@ Si el libro de hechizos no tiene ningún hechizo, entonces su aporte es nulo.
 
 #### Requerimiento
 
-Programar el libro de hechizo para que sea polimórfico con el resto de los artefactos
+- Programar el libro de hechizo para que sea polimórfico con el resto de los artefactos
+- Desarrollar **tests** siguiendo el ejemplo.
 
 #### Ejemplo
 
@@ -169,6 +178,8 @@ Los enemigos en Erethia que Rolando puede vencer son aquellos que tienen un pode
 #### Requerimientos
 - Saber cuales son los enemigos que Rolando **puede vencer**
 - Conocer las moradas **conquistables** por Rolando
+- Desarrollar **tests** siguiendo el ejemplo.
+
 
 #### Ejemplo
  
@@ -181,7 +192,8 @@ Se considera que Rolando es poderoso en la tierra de Erethia si está en condici
 
 #### Requerimiento
 
-Poder determinar si Rolando es poderoso
+- Poder determinar si Rolando es poderoso
+- Desarrollar **tests** siguiendo el ejemplo.
 
 #### Ejemplo
 
